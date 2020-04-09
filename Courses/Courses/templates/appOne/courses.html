@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Courses</title>
+    <link rel="stylesheet" href="{% static 'css/appOne.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-default container" role="navigation" id='mynav'>
+      <span class="navbar-brand" id="mynav">UpSkill</span>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="navbar-link" href="{%  url 'index' %}">Home</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class='myheading'>Here are your Courses: </h1>
+      {% if courses %}
+      <div class="row">
+        {% for course in courses %}
+        <div class="col-sm-3">
+          <table class="mytable" frame="box">
+
+            <tr><td>Course name: {{ course.course_name }}</td></tr>
+            <tr><td>Website: {{ course.website }}</td></tr>
+            <tr><td>Course length: {{ course.length }}</td></tr>
+            <tr><td>Applied users: {{ course.applied }}</td></tr>
+            <tr><td>Rating: {{ course.rating }}</td></tr>
+            <tr><td>Certified: {{ course.certified }}</td></tr>
+            <tr><td>Price: {{ course.price }}</td></tr>
+
+          </table>
+          <br>
+        </div>
+          {% endfor %}
+          </div>
+
+      {% endif %}
+    </div>
+  </body>
+</html>
