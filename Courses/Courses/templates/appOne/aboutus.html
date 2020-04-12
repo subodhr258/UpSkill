@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}"  id="logo">UpSkill</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a  href="{% url 'courses' %}">Courses</a></li>
+                <li><a  href="{% url 'aboutus' %}">About Us</a></li>
+                <li><a  href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="check-in ">
+        <a href="" class="log-reg login"><button>Login</button></a>
+        <a href="" class="log-reg register"><button>Register</button></a>
+        </div>
+    </header>
+
+</body>
+</html>
