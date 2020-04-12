@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Courses</title>
+    <link rel="stylesheet" href="{% static 'css/courses_style.css' %}">
+
+</head>
+  <body>
+
+    <header>
+        <a href="{% url 'index' %}"  id="logo">UpSkill</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a  href="{% url 'courses' %}">Courses</a></li>
+                <li><a  href="{% url 'aboutus' %}">About Us</a></li>
+                <li><a  href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="check-in ">
+        <a href="" class="log-reg login"><button>Login</button></a>
+        <a href="" class="log-reg register"><button>Register</button></a>
+        </div>
+    </header>
+      <h1 class='myheading'>Here are your Courses: </h1>
+      <div class="grid">
+      {% if courses %}
+        {% for course in courses %}
+          <table class="mytable col-33">
+            <tr><td>Course name: {{ course.course_name }}</td></tr>
+            <tr><td>Website: {{ course.website }}</td></tr>
+            <tr><td>Course length: {{ course.length }}</td></tr>
+            <tr><td>Applied users: {{ course.applied }}</td></tr>
+            <tr><td>Rating: {{ course.rating }}</td></tr>
+            <tr><td>Certified: {{ course.certified }}</td></tr>
+            <tr><td>Price: {{ course.price }}</td></tr>
+          </table>
+          <br>
+          {% endfor %}
+      {% endif %}
+    </div>
+
+    <footer>
+        <div class="end-block">
+            <p>Copyright &copy; | 2020</p>
+        </div>
+    </footer>
+
+  </body>
+</html>
