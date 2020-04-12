@@ -19,6 +19,5 @@ from appOne import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
-    path('courses/',include('appOne.urls')),
+    path('',include('appOne.urls')),
 ]
