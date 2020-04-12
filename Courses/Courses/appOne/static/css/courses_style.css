@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+
+#logo{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding-left:  5%;
+    padding-right: 5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline;
+    padding: 0px 30px;
+}
+
+button{
+    border-radius: 5px;
+    border: 1px solid wheat;
+    padding: 5px 15px;
+    margin: 0px 9px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-links li a{
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.nav-links li a:hover{
+    color: wheat;
+    text-decoration: underline;
+}
+
+.log-reg button{
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.log-reg button:hover{
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px){
+    .nav-links li{
+        display: flex;
+        margin: 0;
+        padding: 0px 3px;
+        flex-direction: column;
+    }
+    .check-in{
+        display: flex;
+    }
+}
+
+
+
+.myheading{
+    color: rgb(255, 255, 255);
+    background-color: rgb(52,58,64);
+    padding: 4px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.mytable{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1%;
+}
+
+.mytable td{
+    padding: 1px 20px;
+}
+
+
+
+.end-block{
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+    padding:10px;
+    border-top: blanchedalmond;
+    margin-top:350px ;
+}
+@import "compass";
+
+$grid-color: #FFEBEE ;
+$block-color: #EEFF41 ;
+
+$gutter: 40px;
+
+//some styling:
+
+body{
+    background-color: #fff;
+    color: #222;
+    padding: 50px 0 0;
+}
+
+.block{
+    background-color: $block-color;
+    display: block;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: $gutter;
+}
+
+//the grid:
+
+.grid{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: $grid-color;
+    //just for styling:
+    padding-top: $gutter;
+    padding: 10%;
+}
+
+.gutter{
+    margin-left: ($gutter / 2);
+    margin-right: ($gutter / 2);
+}
+
+.col-33{
+    width: 30%;
+    float: left;
+}
+.col-50{
+    width: 50%;
+    float: left;
+}
+
+.clear{
+    clear: both;
+    display: block;
+}
+
+//responsive
+
+@media all and (max-width:800px) {
+    .col-33{
+        width: 50%;
+    }
+}
+
+@media all and (max-width:600px) {
+    .col-50, .col-33{
+        width: 100%;
+        float: none;
+    }
+}

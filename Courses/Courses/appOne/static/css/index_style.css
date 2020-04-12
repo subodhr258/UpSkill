@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+
+#logo{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding-left:  5%;
+    padding-right: 5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline;
+    padding: 0px 30px;
+}
+
+button{
+    border-radius: 5px;
+    border: 1px solid wheat;
+    padding: 5px 15px;
+    margin: 0px 9px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-links li a{
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.nav-links li a:hover{
+    color: wheat;
+    text-decoration: underline;
+}
+
+.log-reg button{
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.log-reg button:hover{
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px){
+    .nav-links li{
+        display: flex;
+        margin: 0;
+        padding: 0px 3px;
+        flex-direction: column;
+    }
+    .check-in{
+        display: flex;
+    }
+}
+
+
+/* CONTENT */
+
+.parallax-window {
+    z-index: 1;
+    height: 90vh;
+    background: transparent;
+    margin-top: 0px;
+    padding-top: 90px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    background-color: black;
+    width: 80%;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+.parallax-window h2{
+    color: ivory;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.motivation{
+    display: flex;
+    justify-content: center;
+}
+
+.motivation h3{
+    color: black;
+    margin: 30px;
+    font-size: 70px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.lower-header{
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-left: 10%;
+    margin-top: 30px;
+    font-size: 60px;
+}
+
+/* COURSES */
+
+.courses{
+    display: flex;
+    justify-content:  space-evenly;
+}
+
+.courses div{
+    background-color: black;
+    padding : 150px 100px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+.end-block{
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+    padding:10px;
+    border-top: blanchedalmond;
+}
+
+
+
+
+
+
+
+
+
+
+
+
